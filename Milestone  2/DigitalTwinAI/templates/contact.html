@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+.contact-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  margin: -1.5rem -1.5rem 0 -1.5rem;
+  padding: 2rem 0;
+}
+
+.contact-card {
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+}
+
+.contact-left {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+}
+
+.contact-left h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-left p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  max-width: 320px;
+}
+
+.contact-left img {
+  max-width: 200px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.2));
+}
+
+.contact-right {
+  padding: 2.5rem 2rem;
+  background: white;
+}
+
+.contact-right h3 {
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.contact-right .subtitle {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-floating {
+  margin-bottom: 1rem;
+}
+
+.form-floating > .form-control {
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  transition: border-color 0.2s;
+  padding: 1rem 0.75rem;
+  height: calc(3.5rem + 2px);
+}
+
+.form-floating > .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.form-floating > label {
+  padding: 1rem 0.75rem;
+  color: #a0aec0;
+}
+
+.btn-contact {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #667eea;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .contact-left { min-height: 200px; padding: 2rem 1rem; }
+  .contact-left h2 { font-size: 1.8rem; }
+  .contact-left img { max-width: 120px; }
+  .contact-wrapper { padding: 1rem; }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="contact-wrapper">
+  <div class="contact-card">
+    <div class="row g-0">
+      <!-- Left side – branding -->
+      <div class="col-md-5 contact-left">
+        <img src="https://img.icons8.com/fluency/240/000000/artificial-intelligence.png" alt="AI">
+        <h2>Get in Touch</h2>
+        <p>We usually respond within 24 hours.</p>
+      </div>
+
+      <!-- Right side – contact form & info -->
+      <div class="col-md-7 contact-right">
+        <h3>Contact Us</h3>
+        <p class="subtitle">We’d love to hear from you.</p>
+
+        <form method="POST">
+          <div class="form-floating">
+            <input type="text" id="name" name="name" class="form-control" placeholder="Full Name" required>
+            <label for="name"><i class="fas fa-user me-2"></i>Full Name</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" required>
+            <label for="email"><i class="fas fa-envelope me-2"></i>Email Address</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+            <label for="subject"><i class="fas fa-tag me-2"></i>Subject</label>
+          </div>
+
+          <div class="form-floating">
+            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+            <label for="message"><i class="fas fa-comment me-2"></i>Message</label>
+          </div>
+
+          <button type="submit" class="btn btn-contact">
+            <i class="fas fa-paper-plane me-2"></i>Send Message
+          </button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="mt-4 contact-info">
+          <p><strong>Email:</strong> <a href="mailto:support@digitaltwin.ai">support@digitaltwin.ai</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><strong>Address:</strong> Digital Twin AI Inc., Bangalore, India</p>
+          <p><strong>Hours:</strong> Mon–Fri, 9:00 AM – 6:00 PM IST</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-icons mt-3">
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

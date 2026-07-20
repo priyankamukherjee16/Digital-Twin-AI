@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+.terms-wrapper {
+  min-height: 80vh;
+  background: #f8f9fa;
+  padding: 2rem;
+}
+.terms-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+.terms-header {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px 12px 0 0;
+  margin: -2rem -2rem 2rem -2rem;
+}
+.terms-header h2 {
+  margin: 0;
+  font-weight: 700;
+}
+.terms-card h5 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="terms-wrapper">
+  <div class="terms-card">
+    <div class="terms-header">
+      <h2>Terms & Conditions</h2>
+      <p class="mb-0">Please read these terms before creating an account or using Digital Twin AI.</p>
+    </div>
+
+    <h5>Acceptance of Terms</h5>
+    <p>By accessing or using Digital Twin AI, you agree to follow these Terms & Conditions. If you do not agree, please discontinue use of the platform.</p>
+
+    <h5>User Accounts</h5>
+    <ul>
+      <li>Users must register an account.</li>
+      <li>Keep login credentials confidential.</li>
+      <li>Notify us immediately of unauthorized access.</li>
+      <li>Users are responsible for all activities under their account.</li>
+    </ul>
+
+    <h5>Acceptable Use</h5>
+    <ul>
+      <li>Do not use the platform for unlawful purposes.</li>
+      <li>Do not distribute harmful or malicious content.</li>
+      <li>Do not attempt to gain unauthorized access.</li>
+      <li>Do not interfere with platform operations.</li>
+    </ul>
+
+    <h5>AI Recommendations</h5>
+    <p>Digital Twin AI provides recommendations for educational and informational purposes only. They should not be considered financial, legal, medical, or professional advice.</p>
+
+    <h5>Privacy</h5>
+    <p>Your use of Digital Twin AI is subject to our Privacy Policy. By using the platform, you consent to our data collection and processing practices.</p>
+
+    <h5>Intellectual Property</h5>
+    <p>All content and material, including graphics, text, images, software, and data on the platform, are owned by or licensed to Digital Twin AI.</p>
+
+    <h5>Limitation of Liability</h5>
+    <p>Digital Twin AI is not responsible for any damages arising from use, data loss, or service interruptions. Users assume full responsibility for using the platform at their own risk.</p>
+
+    <h5>Changes to Terms</h5>
+    <p>Digital Twin AI may update these Terms & Conditions at any time. Continued use of the platform after updates constitutes acceptance.</p>
+
+    <h5>Contact Information</h5>
+    <p>Email: <a href="mailto:support@digitaltwin.ai">support@digitaltwin.ai</a></p>
+  </div>
+</div>
+{% endblock %}

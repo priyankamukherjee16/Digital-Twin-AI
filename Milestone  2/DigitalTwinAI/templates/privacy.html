@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+.page-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+.page-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+.page-card h2 {
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+.page-card h5 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+  <div class="page-card">
+    <h2>Privacy Policy</h2>
+    <p><strong>Last Updated:</strong> May 2026</p>
+
+    <h5>1. Information We Collect</h5>
+    <ul>
+      <li>Name and contact details</li>
+      <li>Email address and phone number</li>
+      <li>Information you provide through forms</li>
+      <li>Technical info (browser, device)</li>
+    </ul>
+
+    <h5>2. How We Use Your Information</h5>
+    <ul>
+      <li>Provide and improve services</li>
+      <li>Respond to inquiries</li>
+      <li>Send updates and notifications</li>
+      <li>Enhance performance and experience</li>
+    </ul>
+
+    <h5>3. Data Security</h5>
+    <p>We use appropriate security measures to protect your personal information from unauthorized access, disclosure, or misuse.</p>
+
+    <h5>4. Sharing of Information</h5>
+    <p>We do not sell or rent your personal information. Information may be shared only when required by law or with trusted service providers who assist in operating our website.</p>
+
+    <h5>5. Cookies</h5>
+    <p>Our website may use cookies to improve your browsing experience and analyze traffic. You can manage cookie preferences through your browser settings.</p>
+
+    <h5>6. Your Rights</h5>
+    <ul>
+      <li>Access your personal information</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your information where applicable</li>
+      <li>Withdraw consent for data processing</li>
+    </ul>
+
+    <h5>7. Changes to This Policy</h5>
+    <p>We may update this Privacy Policy from time to time. Please review it periodically.</p>
+  </div>
+</div>
+{% endblock %}
